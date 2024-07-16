@@ -1,0 +1,11 @@
+.logo {
+    background-image: url('/images/logistran-logo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 180px;
+}
+
+.logo h1 {
+    visibility: hidden;
+}

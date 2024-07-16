@@ -1,0 +1,33 @@
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 100%;
+  width: 100%;
+  transition: left 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.menu-mobile.open {
+  left: 0;
+}
+
+.icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.home-icon {
+  background-image: url("/images/home-icon.svg");
+}
+.about-icon {
+  background-image: url("/images/about-icon.svg");
+}
+.contact-icon {
+  background-image: url("/images/contact-icon.svg");
+}

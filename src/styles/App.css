@@ -1,0 +1,23 @@
+.button-width {
+    padding: 6px 30px;
+    border-radius: 8px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    width: fit-content;
+    padding: 6px 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-scroll {
+    overflow: hidden;
+  }
