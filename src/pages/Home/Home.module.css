@@ -29,7 +29,7 @@
 }
 
 .layer {
-    background-image: url('./images/wave-haikei.svg');
+    background-image: url('/images/wave-haikei.svg');
 }
 
 .services > div {
