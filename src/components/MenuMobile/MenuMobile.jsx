@@ -14,7 +14,7 @@ const MenuMobile = ({ isOpen, onClose }) => {
 
   return (
     <div className={`${styles['menu-mobile']} ${isOpen ? styles.open : ''} bg-darkblue text-light`}>
-      <ul className={`${styles.menu} flex flex-col justify-items-center items-start align-middle pt-[30vh] px-[20vw] gap-16`}>
+      <ul className={`${styles.menu} flex flex-col justify-items-center items-start align-middle pt-[30vh] px-[10vw] gap-16`}>
         <li>
           <Link to='/' className='flex flex-row justify-center align-middle items-center gap-4 font-medium text-md leading-md' onClick={onClose}>
             <span className={`${styles.icon} ${styles['home-icon']}`}></span>

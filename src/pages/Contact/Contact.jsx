@@ -16,23 +16,23 @@ function Contact() {
             <form action="#" className={`flex flex-col justify-start gap-6 ${styles.form} w-full`}>
               <div className='flex flex-col gap-1 justify-start'>
                 <label htmlFor="name">Nombre</label>
-                <input type="text" id='name' className='bg-[#1c4157] rounded-md h-12 px-4' />
+                <input type="text" id='name' className='bg-white rounded-md h-12 px-4' />
               </div>
               <div className='flex flex-col gap-1 justify-start'>
                 <label htmlFor="lastname">Apellido</label>
-                <input type="text" id='lastname' className='bg-[#1c4157] rounded-md h-12 px-4' />
+                <input type="text" id='lastname' className='bg-white rounded-md h-12 px-4' />
               </div>
               <div className='flex flex-col gap-1 justify-start'>
                 <label htmlFor="phone">Teléfono</label>
-                <input type="text" id='phone' className='bg-[#1c4157] rounded-md h-12 px-4' />
+                <input type="text" id='phone' className='bg-white rounded-md h-12 px-4' />
               </div>
               <div className='flex flex-col gap-1 justify-start'>
                 <label htmlFor="email">Email</label>
-                <input type="test" id='email' className='bg-[#1c4157] rounded-md h-12 px-4' />
+                <input type="test" id='email' className='bg-white rounded-md h-12 px-4' />
               </div>
               <div className='flex flex-col gap-1 justify-start'>
                 <label htmlFor="comment">Consulta</label>
-                <textarea id='comment' className='bg-[#1c4157] rounded-lg px-4 min-h-[300px]'></textarea>
+                <textarea id='comment' className='bg-white rounded-lg px-4 min-h-[300px]'></textarea>
               </div>
               <button type='submit' className={`button-width border-2 border-lightblue bg-lightblue text-white mt-6 w-full`}>Enviar</button>
             </form>
