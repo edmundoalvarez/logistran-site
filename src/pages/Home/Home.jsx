@@ -35,9 +35,9 @@ const Home = () => {
           <div className={`${styles.text} pt-16 pb-20 max-w-lg m-auto flex flex-col justify-start items-start gap-6`}>
             <h2 className='text-darkblue text-lg leading-lg font-black'>Expertos en Transporte y Logística con 25 Años de Experiencia</h2>
             <p>Ofrecemos soluciones logísticas personalizadas, incluyendo retiro de contenedores en puertos y aeropuertos, almacenaje seguro con vigilancia 24/7, y distribución eficiente de mercadería.</p>
-            <div className='flex flex-row justify-start items-start gap-4'>
+            <div className='flex flex-row flex-wrap justify-start items-start gap-4'>
               <Link to={'/contacto'} className={`button border-2 border-lightblue bg-lightblue text-white`}>Contactanos</Link>
-              <Link onClick={(e) => handleSmoothScroll(e, 'clientes')} className={`button border-2 border-lightblue bg-light text-lightblue`}>Nuestros Clientes</Link>
+              {/* <Link onClick={(e) => handleSmoothScroll(e, 'clientes')} className={`button border-2 border-lightblue bg-light text-lightblue`}>Nuestros Clientes</Link> */}
             </div>
           </div>
         </section>
@@ -48,19 +48,19 @@ const Home = () => {
               <div className={`${styles.img} ${styles['retiro']}`}></div>
               <h3 className='text-darkblue text-md leading-md font-black'>Retiro puerto / aeropuerto</h3>
               <p className='text-darkblue text-sm leading-sm font-book'>Retiro de contenedores, cargas sueltas, cargas IMO, mercadería fuera de medida, etc.</p>
-              <Link className={`button-width border-2 border-lightblue bg-lightblue text-white mt-4`}>Contactar</Link>
+              <Link className={`button-width border-2 border-lightblue bg-white text-lightblue mt-4`}>Saber más</Link>
             </div>
             <div className={`${styles.service} flex flex-col justify-center align-middle items-center gap-4 text-center py-10 mx-10`}>
               <div className={`${styles.img} ${styles['almacenamiento']}`}></div>
               <h3 className='text-darkblue text-md leading-md font-black'>Depósito cubierto</h3>
               <p className='text-darkblue text-sm leading-sm font-book'>Cuentamos con un total de 800 m2 y sistema de alarmas custodiado la 24 hs.</p>
-              <Link className={`button-width border-2 border-lightblue bg-lightblue text-white mt-4`}>Contactar</Link>
+              <Link className={`button-width border-2 border-lightblue bg-white text-lightblue mt-4`}>Saber más</Link>
             </div>
             <div className={`${styles.service} flex flex-col justify-center align-middle items-center gap-4 text-center py-10 mx-10`}>
               <div className={`${styles.img} ${styles['entrega']}`}></div>
               <h3 className='text-darkblue text-md leading-md font-black'>Desconsolidado, acopio y distribución de mercadería</h3>
               <p className='text-darkblue text-sm leading-sm font-book'>Ofrecemos soluciones logísticas eficientes para optimizar el manejo y la entrega de sus productos.</p>
-              <Link className={`button-width border-2 border-lightblue bg-lightblue text-white mt-4`}>Contactar</Link>
+              <Link className={`button-width border-2 border-lightblue bg-white text-lightblue mt-4`}>Saber más</Link>
             </div>
           </div>
         </section>
