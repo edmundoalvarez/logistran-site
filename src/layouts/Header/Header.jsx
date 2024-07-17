@@ -17,8 +17,8 @@ const Header = ({ onMenuToggle, isOpen }) => {
           transform
           -translate-x-1/2
           xs:w-xs
-          sm:max-w-sm
-          md:max-w-md
+          sm:max-w-full
+          md:max-w-full
           lg:max-w-lg
           xl:max-w-xl"
         >
@@ -38,8 +38,8 @@ const Header = ({ onMenuToggle, isOpen }) => {
         transform
         translate-x-1/2
         xs:w-xs
-        sm:max-w-sm
-        md:max-w-md
+        sm:max-w-full
+        md:max-w-full
         lg:max-w-lg
         xl:max-w-xl"
       >

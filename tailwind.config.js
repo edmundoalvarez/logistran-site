@@ -58,7 +58,7 @@ export default {
       maxWidth: {
         'xs': '500px',
         'sm': '600px',
-        'md': '800px',
+        'md': '680px',
         'lg': '1000px',
         'xl': '1200px',
       },

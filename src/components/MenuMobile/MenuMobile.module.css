@@ -38,3 +38,12 @@
 .contact-icon {
   background-image: url("/images/contact-icon.svg");
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu-mobile.open {
+    left: 40%;
+    box-shadow: -151px -1px 126px 0px rgba(0,0,0,0.50);
+    -webkit-box-shadow: -151px -1px 126px 0px rgba(0,0,0,0.50);
+    -moz-box-shadow: -151px -1px 126px 0px rgba(0,0,0,0.50);
+  }
+}
