@@ -133,7 +133,7 @@ function Contact() {
                   </li>
                   <li>
                     <span className='text-md font-bold'>Email</span>
-                    <p>ale_strangio@hotmail.com</p>
+                    <p>info@logistran.com.ar</p>
                   </li>
                   <li>
                     <span className='text-md font-bold'>Redes sociales</span>

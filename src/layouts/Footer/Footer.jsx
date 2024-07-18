@@ -35,7 +35,7 @@ const Footer = () => {
             <ul className='text-xs'>
               <li>Avellaneda, Buenos Aires, Argentina.</li>
               <li>011 5616 6381</li>
-              <li>ale_strangio@hotmail.com</li>
+              <li>info@logistran.com.ar</li>
             </ul>
           </li>
           <li className='lg:w-[25%]'>
