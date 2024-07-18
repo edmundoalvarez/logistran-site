@@ -16,7 +16,7 @@ const MainLayout = ({ children }) => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen relative">
+    <div className="flex flex-col min-h-screen relative max-w-[100vw]">
       <Header onMenuToggle={handleMenuToggle} isOpen={menuOpen} />
       <MenuMobile isOpen={menuOpen} onClose={handleCloseMenu} />
       <main className="flex-grow bg-light">

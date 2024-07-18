@@ -1,3 +1,10 @@
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+
 .button-width {
     padding: 6px 30px;
     border-radius: 8px;

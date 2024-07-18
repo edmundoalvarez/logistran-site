@@ -1,4 +1,4 @@
-.logo {
+.logo, .logoDark {
     background-image: url('/images/logistran-logo.svg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -6,6 +6,39 @@
     width: 180px;
 }
 
-.logo h1 {
+.logo h1, .logoDark h1 {
     visibility: hidden;
 }
+
+
+@media (min-width: 1024px) {
+
+    .logo {
+        background-image: url('/images/logistran-logo.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 180px;
+    }
+    
+    .logoDark {
+        background-image: url('/images/logistran-logo-dark.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 180px;
+    }
+
+    .menu li{
+        background-color: none;
+        padding: 8px 20px;
+        border-radius: 10px;
+    }
+
+    .menu .selected{
+        background-color: lightgray;
+        padding: 8px 20px;
+        border-radius: 10px;
+        color: #132D3B;
+    }
+  }

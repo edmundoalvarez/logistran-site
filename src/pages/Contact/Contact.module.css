@@ -1,45 +1,111 @@
 .intro .image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    /* height: 40vh; */
-    max-height: 700px;
-    object-fit: cover;
-    /* background-color: gray; */
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* height: 40vh; */
+  max-height: 700px;
+  object-fit: cover;
+}
+
+.intro .image picture {
+  height: 100%;
+  overflow: hidden;
+}
+.intro .image picture img {
+  object-fit: cover;
+  height: 100%;
+  /* border: solid red 1px; */
+}
+
+/* WAVE */
+.intro .text {
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-image: url('/images/wave-haikei-contact.svg');
+  z-index: 2;
+  margin-top: -60px; /* Superposición */
+  /* border: solid purple 2px; */
+  position: relative;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0px 0px;
+}
+
+.form,
+.info {
+  padding: 40px 0px;
+}
+.info {
+  padding-bottom: 0px;
+}
+
+.form {
+  border-bottom: lightgray solid 1px;
+}
+
+.maps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px; /* Altura fija, puedes ajustarla según tus necesidades */
+  background-color: gray;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  margin-top: 0.5rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.social p {
+  visibility: hidden;
+}
+
+.social-fb {
+  background-image: url('/images/fb-icon-white.svg');
+  color: red;
+}
+.social-ig {
+  background-image: url('/images/ig-icon-white.svg');
+}
+.social-wp {
+  background-image: url('/images/wp-icon-white.svg');
+}
+
+@media (min-width: 1024px) {
+
+  .intro .text {
+
+    margin-top: -80px; /* Superposición */
+
   
-  .intro .image picture {
-    height: 100%;
-    overflow: hidden;
   }
-  .intro .image picture img {
-    object-fit: cover;
-    height: 100%;
-    /* border: solid red 1px; */
-  }
-  
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 0px 0px;
-  }
-  
-  .form,
-  .info {
-    padding: 40px 0px;
-  }
-  .info {
-    padding-bottom: 0px;
-  }
-  
   .form {
-    border-bottom: lightgray solid 1px;
+    border-bottom: none;
+    border-right: 1px #025779 solid;
   }
-  
+
+
   .maps {
     display: flex;
     justify-content: center;
@@ -50,31 +116,21 @@
     border-radius: 8px;
     overflow: hidden;
   }
-  
-  .social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 36px;
-    height: 36px;
-    margin-top: 0.5rem;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+
+  .form,
+  .info {
+    padding: 0px 0px;
   }
   
-  .social p {
-    visibility: hidden;
+}
+
+@media (min-width: 1280px){
+  .intro .text {
+
+    margin-top: -100px; /* Superposición */
+
   }
-  
-  .social-fb {
-    background-image: url('/images/fb-icon-white.svg');
-    color: red;
+  .intro .image picture img {
+    object-fit: contain;
   }
-  .social-ig {
-    background-image: url('/images/ig-icon-white.svg');
-  }
-  .social-wp {
-    background-image: url('/images/wp-icon-white.svg');
-  }
-  
+}

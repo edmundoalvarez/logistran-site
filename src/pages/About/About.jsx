@@ -3,10 +3,19 @@ import styles from './About.module.css'
 function About() {
     return (
         <>
-        <section className={`${styles.intro}`}>
+        <section className={`
+          ${styles.intro}
+          lg:flex
+          lg:flex-row
+          lg:justify-center
+          lg:items-start
+          lg:h-full
+          xl:max-w-xl
+          xl:m-auto
+        `}>
           <div className={styles.image}>
             <picture>
-              <source srcSet="./images/about-medium.jpg" media="(min-width: 769px) and (max-width: 1024px)" />
+              <source srcSet="./images/about-medium.jpg" media="(min-width: 768px) and (max-width: 1023px)" />
               <img src="./images/about-small.jpg" alt="Imágen de la intro." />
             </picture>
           </div>
@@ -21,6 +30,10 @@ function About() {
             md:w-md
             md:max-w-md
             md:px-md
+            lg:pt-[200px]
+            lg:pb-[140px]
+            lg:w-[55%]
+            lg:max-w-[600px]
           `}>
             <h2 className='text-darkblue text-xl leading-xl font-black'>Quiénes somos</h2>
             <p>En LogiStran, brindamos servicios integrales de Transporte y Logística, respaldados por 25 años de experiencia. Nos especializamos en el retiro de contenedores y cargas desde puertos y aeropuertos, la gestión de mercadería fuera de medida, y contamos con un depósito seguro de 800 m² con vigilancia 24/7.</p>
