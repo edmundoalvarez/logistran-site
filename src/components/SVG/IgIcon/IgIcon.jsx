@@ -9,7 +9,7 @@ function IgIcon({ width = '32px', height = '32px', baseColor = 'black', hoverCol
 
     return (
         <>
-            <Link to={'#'} className={`${styles.social}`}>
+            <Link to={'https://www.instagram.com/logi_stran'} className={`${styles.social}`}>
                   <p>Instagram</p>
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 

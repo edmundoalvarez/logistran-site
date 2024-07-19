@@ -8,7 +8,7 @@ function WpIcon({ width = '32px', height = '32px', baseColor = 'black', hoverCol
 
     return (
         <>
-            <Link to={'#'} className={`${styles.social}`}>
+            <Link to={'https://wa.me/5491156166381?text=Hola%2C%20quiero%20hacer%20una%20consulta'} className={`${styles.social}`}>
                   <p>Whatsapp</p>
                   <svg 
                     xmlns="http://www.w3.org/2000/svg" 

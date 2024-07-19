@@ -8,7 +8,7 @@ function FbIcon({ width = '32px', height = '32px', baseColor = 'black', hoverCol
 
     return (
         <>
-            <Link to={'#'} className={`${styles.social}`}>
+            <Link to={'https://www.facebook.com/Logistran2020/'} className={`${styles.social}`}>
                   <p>Facebook</p>
                     <svg 
                         xmlns="http://www.w3.org/2000/svg" 
