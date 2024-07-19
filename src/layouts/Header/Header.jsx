@@ -90,7 +90,7 @@ const Header = ({ onMenuToggle, isOpen }) => {
         </div>
       </header>
       <div className="
-        z-10 
+        z-20 
         bg-primary 
         text-white p-4 
         flex flex-row justify-end items-center 
