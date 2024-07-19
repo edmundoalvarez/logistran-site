@@ -107,21 +107,36 @@
   }
   
   @media (min-width: 1024px) {
+
+    .intro {
+      position: relative;
+      z-index: 1;
+    }
+
     .intro .image {
       max-height: 1000px;
       position: relative;
       z-index: 1;
       width: 50%;
     }
+
+    .intro .image picture {
+      width: auto;
+      height: 100%;
+    }
+
+    .intro .image picture img {
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+    
   
     .intro > div {
       width: 50vw;
     }
   
-    .intro {
-      position: relative;
-      z-index: 1;
-    }
+    
   
     .services {
       position: relative;

@@ -102,6 +102,17 @@
 
 @media (min-width: 1024px) {
 
+  .intro .image picture {
+    width: auto;
+    height: 100%;
+  }
+
+  .intro .image picture img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .intro .text {
 
     margin-top: -80px; /* Superposición */
