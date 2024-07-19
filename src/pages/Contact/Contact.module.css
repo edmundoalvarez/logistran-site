@@ -153,3 +153,13 @@
     object-fit: contain;
   }
 }
+@media (min-width: 1400px){
+  .intro .text {
+
+    margin-top: -340px; /* Superposición */
+
+  }
+  .intro .image picture img {
+    object-fit: contain;
+  }
+}
