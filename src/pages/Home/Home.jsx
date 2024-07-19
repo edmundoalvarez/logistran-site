@@ -67,13 +67,18 @@ const Home = () => {
             xl:max-w-[380px]
           '>Ofrecemos soluciones logísticas personalizadas, incluyendo retiro de contenedores en puertos y aeropuertos, almacenaje seguro con vigilancia 24/7, y distribución eficiente de mercadería.</p>
           <div className='flex flex-row flex-wrap justify-start items-start gap-4'>
-            <Link to={'/contacto'} className={`button border-2 border-lightblue bg-lightblue text-white`}>Contactanos</Link>
+            <Link to={'/contacto'} className={`
+              button border-2 border-lightblue bg-lightblue text-white
+              hover:bg-[#22a4d7]
+              hover:border-[#22a4d7]
+              transition-all duration-200 ease-in-out
+            `}>Contactanos</Link>
           </div>
         </div>
       </section>
 
       <section className={`
-        ${styles.services} ${styles.spacer} ${styles.layer} pb-24
+        ${styles.services} ${styles.spacer} ${styles.layer} pb-4
         lg:relative
         lg:top-0
         2xl:pb-0
@@ -118,13 +123,20 @@ const Home = () => {
               lg:flex-col
               lg:justify-center
               lg:align-center
+              max-w-[250px]
             '>Retiro puerto / aeropuerto</h3>
             <p className='
               text-darkblue text-sm leading-sm font-book
               lg:h-[72px]
               xl:h-[60px]
+              max-w-[250px]
             '>Retiro de contenedores, cargas sueltas, cargas IMO, mercadería fuera de medida, etc.</p>
-            <Link className={`button-width border-2 border-lightblue bg-white text-lightblue mt-4`}>Saber más</Link>
+            <Link className={`
+              button-width border-2 border-lightblue bg-white text-lightblue mt-4
+              transition-all duration-200 ease-in-out
+              hover:bg-lightblue
+              hover:text-white
+            `}>Saber más</Link>
           </div>
           <div id='deposito' className={`
             ${styles.service} 
@@ -147,13 +159,20 @@ const Home = () => {
               lg:flex-col
               lg:justify-center
               lg:align-center
+              max-w-[250px]
             '>Depósito cubierto</h3>
             <p className='
               text-darkblue text-sm leading-sm font-book
               lg:h-[72px]
               xl:h-[60px]
+              max-w-[250px]
             '>Cuentamos con un total de 800 m2 y sistema de alarmas custodiado la 24 hs.</p>
-            <Link className={`button-width border-2 border-lightblue bg-white text-lightblue mt-4`}>Saber más</Link>
+            <Link className={`
+              button-width border-2 border-lightblue bg-white text-lightblue mt-4
+              transition-all duration-200 ease-in-out
+              hover:bg-lightblue
+              hover:text-white
+            `}>Saber más</Link>
           </div>
           <div id='distribucion' className={`
             ${styles.service} w-[80%] m-0 mx-auto mb-0 border-b-0 flex flex-col justify-center align-middle items-center gap-4 text-center py-10
@@ -174,20 +193,27 @@ const Home = () => {
               lg:flex-col
               lg:justify-center
               lg:align-center
+              max-w-[250px]
             '>Desconsolidado, acopio y distribución de mercadería</h3>
             <p className='
               text-darkblue text-sm leading-sm font-book
               lg:h-[72px]
               xl:h-[60px]
+              max-w-[250px]
             '>Ofrecemos soluciones logísticas eficientes para optimizar el manejo y la entrega de sus productos.</p>
-            <Link className={`button-width border-2 border-lightblue bg-white text-lightblue mt-4`}>Saber más</Link>
+            <Link className={`
+              button-width border-2 border-lightblue bg-white text-lightblue mt-4
+              transition-all duration-200 ease-in-out
+              hover:bg-lightblue
+              hover:text-white
+            `}>Saber más</Link>
           </div>
         </div>
       </section>
 
-      <section id='clientes' className='lg:bg-darkblue relative' style={{ top: '-2px', marginBottom: '-2px' }}>
+      <section id='clientes' className={`${styles.clients} bg-darkblue relative`}>
       <div className='
-        m-auto py-20
+        m-auto py-32
         xs:w-xs
         xs:max-w-xs
         xs:px-xs
@@ -200,12 +226,15 @@ const Home = () => {
         lg:w-lg
         lg:max-w-lg
         lg:px-lg
-        lg:pt-10
         lg:pb-40
+        xl:pt-10
+        xl:pb-52
       '>
         <h2 className='text-white text-lg leading-lg font-black'>Nuestros Clientes</h2>
         <div className="
           grid grid-cols-2 gap-4 mt-4
+          xs:grid-cols-1
+          xs:mt-14
           sm:grid-cols-2 
           lg:grid-cols-4
           lg:mt-10
@@ -244,7 +273,11 @@ const Home = () => {
                 '>
                   Ofrecemos flexibilidad en la cotización y presupuesto de nuestros servicios, asegurando siempre la optimización de costos operativos para su negocio.</p>
               </div>
-              <Link to={'/contacto'} className={`button border-2 border-lightblue bg-transparent text-white m-auto mt-6`}>Ir a formulario</Link>
+              <Link to={'/contacto'} className={`
+                button border-2 border-lightblue bg-transparent text-white m-auto mt-6
+                transition-all duration-200 ease-in-out
+                hover:bg-lightblue
+              `}>Ir a formulario</Link>
             </div>
           </div>
         </div>

@@ -43,7 +43,12 @@ function About() {
             <p>Nos comprometemos a ofrecer atención personalizada y los recursos necesarios para apoyar sus proyectos logísticos de manera eficiente y segura.</p>
 
             <div className='flex flex-row justify-start items-start gap-4 mt-4'>
-              <Link className={`button-width border-2 border-lightblue bg-lightblue text-white`}>Contactanos</Link>
+              <Link className={`
+                button-width border-2 border-lightblue bg-lightblue text-white
+                hover:bg-[#22a4d7]
+                hover:border-[#22a4d7]
+                transition-all duration-200 ease-in-out
+              `}>Contactanos</Link>
               {/* <Link className={`button-width border-2 border-lightblue bg-light text-lightblue`}>Button</Link> */}
             </div>
           </div>

@@ -27,4 +27,7 @@ html, body {
 
 .no-scroll {
     overflow: hidden;
+
+    /* background-color: #22a4d7; */
 }
+

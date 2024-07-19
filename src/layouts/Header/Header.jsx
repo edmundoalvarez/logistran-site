@@ -13,6 +13,8 @@ const Header = ({ onMenuToggle, isOpen }) => {
 
   const menuTextColorClass = location.pathname === '/contacto' ? 'text-white' : 'text-darkblue';
 
+  const hoverClass = location.pathname === '/contacto' ? 'hover:text-darkblue' : '';
+
   return (
     <>
       <header
@@ -45,14 +47,44 @@ const Header = ({ onMenuToggle, isOpen }) => {
           xl:flex
         ">
           <ul className={`${styles.menu} flex flex-row justify-items-center items-start align-middle gap-6 ${menuTextColorClass}`}>
-            <li className={isSelected('/')}>
-              <Link to='/' className='flex flex-row justify-center align-middle items-center gap-4 font-medium text-[0.8rem] leading-xs'>Home</Link>
+            <li>
+              <Link to='/' className={`
+                ${isSelected('/')} 
+                py-[8px] px-[20px] 
+                flex flex-row justify-center align-middle items-center gap-4 
+                font-medium text-[0.8rem] leading-xs
+                rounded-[10px]
+                border-[2px] border-transparent
+                transition-all duration-200 ease-in-out
+                hover:bg-graylighter
+                ${hoverClass}
+              `}>Home</Link>
             </li>
-            <li className={isSelected('/quienes-somos')}>
-              <Link to='/quienes-somos' className='flex flex-row justify-center align-middle items-center gap-4 font-medium text-[0.8rem] leading-xs'>Quiénes somos</Link>
+            <li>
+              <Link to='/quienes-somos' className={`
+                ${isSelected('/quienes-somos')}  
+                py-[8px] px-[20px] 
+                flex flex-row justify-center align-middle items-center gap-4 
+                font-medium text-[0.8rem] leading-xs
+                rounded-[10px]
+                border-[2px] border-transparent
+                transition-all duration-200 ease-in-out
+                hover:bg-graylighter 
+                ${hoverClass}
+              `}>Quiénes somos</Link>
             </li>
-            <li className={isSelected('/contacto')}>
-              <Link to='/contacto' className='flex flex-row justify-center align-middle items-center gap-4 font-medium text-[0.8rem] leading-xs'>Contacto</Link>
+            <li>
+              <Link to='/contacto' className={`
+                ${isSelected('/contacto')}  
+                py-[8px] px-[20px] 
+                flex flex-row justify-center align-middle items-center gap-4 
+                font-medium text-[0.8rem] leading-xs
+                rounded-[10px]
+                border-[2px] border-transparent
+                transition-all duration-200 ease-in-out
+                hover:bg-graylighter
+                ${hoverClass}
+              `}>Contacto</Link>
             </li>
           </ul>
         </div>

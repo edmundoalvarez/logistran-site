@@ -65,7 +65,9 @@ function Contact() {
               lg:w-[55%]
               lg:pr-8
               lg:gap-4
-              xl:pr-20
+              xl:pr-10
+              xl:w-[50%]
+              2xl:w-[50%]
             `}>
               <div className='
                 flex flex-col justify-start gap-6 w-full
@@ -101,13 +103,20 @@ function Contact() {
                 <label htmlFor="comment">Consulta</label>
                 <textarea id='comment' className='bg-white rounded-lg px-4 min-h-[300px] max-h-[500px] resize-none'></textarea>
               </div>
-              <button type='submit' className={`button-width border-2 border-lightblue bg-lightblue text-white mt-6 w-full`}>Enviar</button>
+              <button type='submit' className={`
+                button-width border-2 border-lightblue bg-lightblue text-white mt-6 w-full py-[8px]
+                hover:bg-[#22a4d7]
+                hover:border-[#22a4d7]
+                transition-all duration-200 ease-in-out
+              `}>Enviar</button>
             </form>
             <div className={`
               ${styles.info} w-full flex flex-col justify-start gap-8
               lg:w-[45%]
               lg:pl-8
-              xl:pl-20
+              xl:pl-10
+              xl:w-[50%]
+              2xl:w-[50%]
             `}>
               <div className={styles.maps}>
                 <iframe

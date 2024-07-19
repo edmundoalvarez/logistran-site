@@ -31,14 +31,15 @@
 
     .menu li{
         background-color: none;
-        padding: 8px 20px;
+        padding: 0px;
         border-radius: 10px;
     }
 
     .menu .selected{
-        background-color: lightgray;
+        background-color: transparent;
+        border: solid 2px #0093CC;
         padding: 8px 20px;
         border-radius: 10px;
-        color: #132D3B;
+        /* color: #132D3B; */
     }
   }
