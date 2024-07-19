@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './FbIcon.module.css'
 import { useState } from 'react';
 
-function FbIcon({ width, height, baseColor, hoverColor }) {
+function FbIcon({ width = '32px', height = '32px', baseColor = 'black', hoverColor = 'red' }) {
     const [color, setColor] = useState(baseColor);
 
     return (
@@ -45,11 +45,5 @@ FbIcon.propTypes = {
     hoverColor: PropTypes.string,
 };
   
-FbIcon.defaultProps = {
-    width: '32px',
-    height: '32px',
-    baseColor: 'black',
-    hoverColor: 'red',
-};
 
 export default FbIcon;

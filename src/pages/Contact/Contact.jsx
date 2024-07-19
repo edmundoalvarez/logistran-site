@@ -2,8 +2,69 @@ import styles from './Contact.module.css';
 import FbIcon from '../../components/SVG/FbIcon/FbIcon';
 import IgIcon from '../../components/SVG/IgIcon/IgIcon';
 import WpIcon from '../../components/SVG/WpIcon/WpIcon';
+import { useForm } from 'react-hook-form';
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
+  const { register, handleSubmit, formState: { errors }, setError, reset } = useForm();
+
+  const onSubmit = (data, event) => {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Validación
+    let valid = true;
+
+    if (!data.name) {
+      setError('name', { type: 'manual', message: 'El nombre es obligatorio' });
+      valid = false;
+    }
+
+    if (!data.lastname) {
+      setError('lastname', { type: 'manual', message: 'El apellido es obligatorio' });
+      valid = false;
+    }
+
+    const phonePattern = /^\+?\d+$/;
+    if (!data.phone) {
+      setError('phone', { type: 'manual', message: 'El teléfono es obligatorio' });
+      valid = false;
+    } else if (!phonePattern.test(data.phone)) {
+      setError('phone', { type: 'manual', message: 'El teléfono debe ser un número válido' });
+      valid = false;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!data.email) {
+      setError('email', { type: 'manual', message: 'El email es obligatorio' });
+      valid = false;
+    } else if (!emailPattern.test(data.email)) {
+      setError('email', { type: 'manual', message: 'El email debe ser válido' });
+      valid = false;
+    }
+
+    if (!data.comment) {
+      setError('comment', { type: 'manual', message: 'La consulta es obligatoria' });
+      valid = false;
+    }
+
+    if (valid) {
+      toast.success('Formulario enviado!', {
+        position: "top-center",
+        autoClose: false,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+      });
+      console.log(data);
+      reset();
+    }
+  };
+
   return (
     <>
       <section className={`${styles.intro}`}>
@@ -59,10 +120,8 @@ function Contact() {
               xl:px-0
               xl:max-w-xl
               xl:items-center
-
-
             `}>
-            <form action="#" className={`
+            <form onSubmit={handleSubmit((data, event) => onSubmit(data, event))} className={`
               flex flex-col justify-start gap-6 ${styles.form} w-full
               lg:w-[55%]
               lg:pr-8
@@ -79,11 +138,13 @@ function Contact() {
               '>
                 <div className='flex flex-col gap-1 justify-start lg:w-[50%]'>
                   <label htmlFor="name">Nombre</label>
-                  <input type="text" id='name' className='bg-white rounded-md h-10 px-4' />
+                  <input type="text" id='name' {...register('name')} className='bg-white rounded-md h-10 px-4 text-darkblue' />
+                  {errors.name && <p className="text-red-500">{errors.name.message}</p>}
                 </div>
                 <div className='flex flex-col gap-1 justify-start lg:w-[50%]'>
                   <label htmlFor="lastname">Apellido</label>
-                  <input type="text" id='lastname' className='bg-white rounded-md h-10 px-4' />
+                  <input type="text" id='lastname' {...register('lastname')} className='bg-white rounded-md h-10 px-4 text-darkblue' />
+                  {errors.lastname && <p className="text-red-500">{errors.lastname.message}</p>}
                 </div>
               </div>
               <div className='
@@ -94,16 +155,19 @@ function Contact() {
               '>
                 <div className='flex flex-col gap-1 justify-start lg:w-[50%]'>
                   <label htmlFor="phone">Teléfono</label>
-                  <input type="text" id='phone' className='bg-white rounded-md h-10 px-4' />
+                  <input type="text" id='phone' {...register('phone')} className='bg-white rounded-md h-10 px-4 text-darkblue' />
+                  {errors.phone && <p className="text-red-500">{errors.phone.message}</p>}
                 </div>
                 <div className='flex flex-col gap-1 justify-start lg:w-[50%]'>
                   <label htmlFor="email">Email</label>
-                  <input type="test" id='email' className='bg-white rounded-md h-10 px-4' />
+                  <input type="test" id='email' {...register('email')} className='bg-white rounded-md h-10 px-4 text-darkblue' />
+                  {errors.email && <p className="text-red-500">{errors.email.message}</p>}
                 </div>
               </div>
               <div className='flex flex-col gap-1 justify-start'>
                 <label htmlFor="comment">Consulta</label>
-                <textarea id='comment' className='bg-white rounded-lg px-4 min-h-[300px] max-h-[500px] resize-none'></textarea>
+                <textarea id='comment' {...register('comment')} className='bg-white rounded-lg py-3 px-4 min-h-[300px] max-h-[500px] resize-none text-darkblue'></textarea>
+                {errors.comment && <p className="text-red-500">{errors.comment.message}</p>}
               </div>
               <button type='submit' className={`
                 button-width border-2 border-lightblue bg-lightblue text-white mt-6 w-full py-[8px]
@@ -111,6 +175,17 @@ function Contact() {
                 hover:border-[#22a4d7]
                 transition-all duration-200 ease-in-out
               `}>Enviar</button>
+              <ToastContainer
+                position="top-center"
+                autoClose={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                theme="colored"
+                transition= {Bounce}
+              />
             </form>
             <div className={`
               ${styles.info} w-full flex flex-col justify-start gap-8
@@ -150,21 +225,12 @@ function Contact() {
                     <span className='text-md font-bold'>Redes sociales</span>
                     <ul className={`text-xs flex flex-row justify-start align-middle gap-4`}>
                       <li>
-                        {/* <Link className={`${styles.social} ${styles['social-fb']}`}>
-                          <p>Facebook</p>
-                        </Link> */}
                         <FbIcon baseColor={'white'} hoverColor={'#0093CC'} height={'36px'} width={'36px'}/>
                       </li>
                       <li>
-                        {/* <Link className={`${styles.social} ${styles['social-ig']}`}>
-                          <p>Instagram</p>
-                        </Link> */}
                         <IgIcon baseColor={'white'} hoverColor={'#0093CC'} height={'36px'} width={'36px'}/>
                       </li>
                       <li>
-                        {/* <Link className={`${styles.social} ${styles['social-wp']}`}>
-                          <p>Whatsapp</p>
-                        </Link> */}
                         <WpIcon baseColor={'white'} hoverColor={'#0093CC'} height={'36px'} width={'36px'}/>
                       </li>
                     </ul>

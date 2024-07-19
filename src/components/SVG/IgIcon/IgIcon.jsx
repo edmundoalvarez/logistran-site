@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './IgIcon.module.css'
 import { useState } from 'react';
 
-function IgIcon({ width, height, baseColor, hoverColor }) {
+function IgIcon({ width = '32px', height = '32px', baseColor = 'black', hoverColor = 'red' }) {
     
     const [color, setColor] = useState(baseColor);
 
@@ -50,13 +50,6 @@ IgIcon.propTypes = {
     height: PropTypes.string,
     baseColor: PropTypes.string,
     hoverColor: PropTypes.string,
-};
-  
-IgIcon.defaultProps = {
-    width: '32px',
-    height: '32px',
-    baseColor: 'black',
-    hoverColor: 'red',
 };
 
 export default IgIcon;

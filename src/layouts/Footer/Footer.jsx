@@ -45,21 +45,12 @@ const Footer = () => {
             <span className='font-bold text-sm'>Redes Sociales</span>
             <ul className={`text-xs flex flex-row justify-start align-middle gap-4`}>
               <li>
-                {/* <Link className={`${styles.social} ${styles['social-fb']}`}>
-                  <p>Facebook</p>
-                </Link> */}
                 <FbIcon baseColor={'#132D3B'} hoverColor={'#0093CC'}/>
               </li>
               <li>
-                {/* <Link className={`${styles.social} ${styles['social-ig']}`}>
-                  <p>Instagram</p>
-                </Link> */}
                 <IgIcon baseColor={'#132D3B'} hoverColor={'#0093CC'}/>
               </li>
               <li>
-                {/* <Link className={`${styles.social} ${styles['social-wp']}`}>
-                  <p>Whatsapp</p>
-                </Link> */}
                 <WpIcon baseColor={'#132D3B'} hoverColor={'#0093CC'}/>
               </li>
             </ul>

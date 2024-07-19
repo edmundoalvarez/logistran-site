@@ -30,3 +30,14 @@ html, body {
 
     /* background-color: #22a4d7; */
 }
+
+/* Sobrescribe los estilos para react-toastify */
+.Toastify__toast--custom {
+    background-color: #333; /* Color de fondo del toast */
+    color: #fff; /* Color del texto */
+  }
+  
+  .Toastify__progress-bar--custom {
+    background-color: #f5a623; /* Color de la barra de progreso */
+  }
+  

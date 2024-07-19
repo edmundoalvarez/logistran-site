@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './WpIcon.module.css'
 import { useState } from 'react';
 
-function WpIcon({ width, height, baseColor, hoverColor }) {
+function WpIcon({ width = '32px', height = '32px', baseColor = 'black', hoverColor = 'red' }) {
     const [color, setColor] = useState(baseColor);
 
     return (
@@ -49,13 +49,6 @@ WpIcon.propTypes = {
     height: PropTypes.string,
     baseColor: PropTypes.string,
     hoverColor: PropTypes.string,
-};
-  
-WpIcon.defaultProps = {
-    width: '32px',
-    height: '32px',
-    baseColor: 'black',
-    hoverColor: 'red',
 };
 
 export default WpIcon;
