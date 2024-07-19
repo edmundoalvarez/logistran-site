@@ -1,6 +1,6 @@
 import Hamburger from 'hamburger-react';
 import PropTypes from 'prop-types';
-import styles from './Header.module.css'
+import styles from './Header.module.css';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = ({ onMenuToggle, isOpen }) => {
@@ -33,7 +33,7 @@ const Header = ({ onMenuToggle, isOpen }) => {
           md:max-w-full
           lg:max-w-lg
           lg:py-8
-          lg:z-[2]
+          lg:z-10  /* Ajustar z-index */
           xl:max-w-xl"
         >
         <div className={logoBackgroundClass}>
@@ -90,7 +90,7 @@ const Header = ({ onMenuToggle, isOpen }) => {
         </div>
       </header>
       <div className="
-        z-20 
+        z-10 
         bg-primary 
         text-white p-4 
         flex flex-row justify-end items-center 

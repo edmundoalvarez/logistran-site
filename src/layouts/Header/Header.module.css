@@ -4,42 +4,42 @@
     background-size: contain;
     background-position: center;
     width: 180px;
-}
-
-.logo h1, .logoDark h1 {
+    z-index: 10; /* Asegura que el logo esté por encima */
+    position: relative;
+  }
+  
+  .logo h1, .logoDark h1 {
     visibility: hidden;
-}
-
-
-@media (min-width: 1024px) {
-
+  }
+  
+  @media (min-width: 1024px) {
     .logo {
-        background-image: url('/images/logistran-logo.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 180px;
+      background-image: url('/images/logistran-logo.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 180px;
     }
-    
+  
     .logoDark {
-        background-image: url('/images/logistran-logo-dark.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 180px;
+      background-image: url('/images/logistran-logo-dark.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 180px;
     }
-
-    .menu li{
-        background-color: none;
-        padding: 0px;
-        border-radius: 10px;
+  
+    .menu li {
+      background-color: none;
+      padding: 0px;
+      border-radius: 10px;
     }
-
-    .menu .selected{
-        background-color: transparent;
-        border: solid 2px #0093CC;
-        padding: 8px 20px;
-        border-radius: 10px;
-        /* color: #132D3B; */
+  
+    .menu .selected {
+      background-color: transparent;
+      border: solid 2px #0093CC;
+      padding: 8px 20px;
+      border-radius: 10px;
     }
   }
+  
