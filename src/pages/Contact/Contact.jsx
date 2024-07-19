@@ -5,28 +5,33 @@ import WpIcon from '../../components/SVG/WpIcon/WpIcon';
 import { useForm } from 'react-hook-form';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import emailjs from 'emailjs-com'; // Importa EmailJS
+import emailjs from 'emailjs-com';
+import CircularProgress from '@mui/material/CircularProgress';
+import { useState } from 'react';
+
 
 
 function Contact() {
+  const [loading, setLoading] = useState(false);
+
   const { register, handleSubmit, formState: { errors }, setError, reset } = useForm();
 
   const onSubmit = (data, event) => {
-    event.preventDefault(); // Prevent the default form submission
-
-    // Validación
+    event.preventDefault();
+    setLoading(true);
+  
     let valid = true;
-
+  
     if (!data.name) {
       setError('name', { type: 'manual', message: 'El nombre es obligatorio' });
       valid = false;
     }
-
+  
     if (!data.lastname) {
       setError('lastname', { type: 'manual', message: 'El apellido es obligatorio' });
       valid = false;
     }
-
+  
     const phonePattern = /^\+?\d+$/;
     if (!data.phone) {
       setError('phone', { type: 'manual', message: 'El teléfono es obligatorio' });
@@ -35,7 +40,7 @@ function Contact() {
       setError('phone', { type: 'manual', message: 'El teléfono debe ser un número válido' });
       valid = false;
     }
-
+  
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!data.email) {
       setError('email', { type: 'manual', message: 'El email es obligatorio' });
@@ -44,21 +49,20 @@ function Contact() {
       setError('email', { type: 'manual', message: 'El email debe ser válido' });
       valid = false;
     }
-
+  
     if (!data.comment) {
       setError('comment', { type: 'manual', message: 'La consulta es obligatoria' });
       valid = false;
     }
-
+  
     if (valid) {
-      // Configuración de EmailJS
       const serviceID = 'service_7iqvitn';
       const templateID = 'template_omm4iwr';
       const userID = 'qDAX0zJ6eD0hzQhvr';
-
+  
       emailjs.send(serviceID, templateID, data, userID)
-        .then((response) => {
-          console.log('Email enviado con éxito!', response.status, response.text);
+        .then(() => {
+          setLoading(false);
           toast.success('Formulario enviado!', {
             position: "top-center",
             autoClose: false,
@@ -71,8 +75,9 @@ function Contact() {
             transition: Bounce,
           });
           reset();
-        }, (err) => {
-          console.error('Error al enviar el email:', err);
+        })
+        .catch(() => {
+          setLoading(false);
           toast.error('Error al enviar el formulario, por favor inténtelo de nuevo.', {
             position: "top-center",
             autoClose: false,
@@ -85,6 +90,8 @@ function Contact() {
             transition: Bounce,
           });
         });
+    } else {
+      setLoading(false);
     }
   };
 
@@ -197,7 +204,9 @@ function Contact() {
                 hover:bg-[#22a4d7]
                 hover:border-[#22a4d7]
                 transition-all duration-200 ease-in-out
-              `}>Enviar</button>
+              `} disabled={loading}>
+                {loading ? <CircularProgress size={24} color="inherit" /> : 'Enviar'}
+              </button>
               <ToastContainer
                 position="top-center"
                 autoClose={false}

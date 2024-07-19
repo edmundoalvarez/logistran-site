@@ -131,7 +131,7 @@ const Home = () => {
               xl:h-[60px]
               max-w-[250px]
             '>Retiro de contenedores, cargas sueltas, cargas IMO, mercadería fuera de medida, etc.</p>
-            <Link className={`
+            <Link to={'/contacto'} className={`
               button-width border-2 border-lightblue bg-white text-lightblue mt-4
               transition-all duration-200 ease-in-out
               hover:bg-lightblue
@@ -167,7 +167,7 @@ const Home = () => {
               xl:h-[60px]
               max-w-[250px]
             '>Cuentamos con un total de 800 m2 y sistema de alarmas custodiado la 24 hs.</p>
-            <Link className={`
+            <Link to={'/contacto'} className={`
               button-width border-2 border-lightblue bg-white text-lightblue mt-4
               transition-all duration-200 ease-in-out
               hover:bg-lightblue
@@ -201,7 +201,7 @@ const Home = () => {
               xl:h-[60px]
               max-w-[250px]
             '>Ofrecemos soluciones logísticas eficientes para optimizar el manejo y la entrega de sus productos.</p>
-            <Link className={`
+            <Link to={'/contacto'} className={`
               button-width border-2 border-lightblue bg-white text-lightblue mt-4
               transition-all duration-200 ease-in-out
               hover:bg-lightblue
