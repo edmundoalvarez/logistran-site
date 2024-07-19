@@ -1,0 +1,19 @@
+.social {
+    /* margin-top: 0.5rem; */
+    /* border: solid 1px red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* width: 32px; */
+    margin-top: 14px;
+}
+
+.social p {
+    visibility: hidden;
+    font-size: 0;
+}
+
+.social svg {
+    transition: all ease-in-out 0.2s;
+}

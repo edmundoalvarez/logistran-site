@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
-import styles from './Footer.module.css';
+// import styles from './Footer.module.css';
+import FbIcon from '../../components/SVG/FbIcon/FbIcon';
+import IgIcon from '../../components/SVG/IgIcon/IgIcon';
+import WpIcon from '../../components/SVG/WpIcon/WpIcon';
 
 const Footer = () => {
     const handleSmoothScroll = (event, targetId) => {
@@ -42,19 +45,22 @@ const Footer = () => {
             <span className='font-bold text-sm'>Redes Sociales</span>
             <ul className={`text-xs flex flex-row justify-start align-middle gap-4`}>
               <li>
-                <Link className={`${styles.social} ${styles['social-fb']}`}>
+                {/* <Link className={`${styles.social} ${styles['social-fb']}`}>
                   <p>Facebook</p>
-                </Link>
+                </Link> */}
+                <FbIcon baseColor={'#132D3B'} hoverColor={'#0093CC'}/>
               </li>
               <li>
-                <Link className={`${styles.social} ${styles['social-ig']}`}>
+                {/* <Link className={`${styles.social} ${styles['social-ig']}`}>
                   <p>Instagram</p>
-                </Link>
+                </Link> */}
+                <IgIcon baseColor={'#132D3B'} hoverColor={'#0093CC'}/>
               </li>
               <li>
-                <Link className={`${styles.social} ${styles['social-wp']}`}>
+                {/* <Link className={`${styles.social} ${styles['social-wp']}`}>
                   <p>Whatsapp</p>
-                </Link>
+                </Link> */}
+                <WpIcon baseColor={'#132D3B'} hoverColor={'#0093CC'}/>
               </li>
             </ul>
           </li>

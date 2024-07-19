@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom';
 import styles from './Contact.module.css';
+import FbIcon from '../../components/SVG/FbIcon/FbIcon';
+import IgIcon from '../../components/SVG/IgIcon/IgIcon';
+import WpIcon from '../../components/SVG/WpIcon/WpIcon';
 
 function Contact() {
   return (
@@ -148,19 +150,22 @@ function Contact() {
                     <span className='text-md font-bold'>Redes sociales</span>
                     <ul className={`text-xs flex flex-row justify-start align-middle gap-4`}>
                       <li>
-                        <Link className={`${styles.social} ${styles['social-fb']}`}>
+                        {/* <Link className={`${styles.social} ${styles['social-fb']}`}>
                           <p>Facebook</p>
-                        </Link>
+                        </Link> */}
+                        <FbIcon baseColor={'white'} hoverColor={'#0093CC'} height={'36px'} width={'36px'}/>
                       </li>
                       <li>
-                        <Link className={`${styles.social} ${styles['social-ig']}`}>
+                        {/* <Link className={`${styles.social} ${styles['social-ig']}`}>
                           <p>Instagram</p>
-                        </Link>
+                        </Link> */}
+                        <IgIcon baseColor={'white'} hoverColor={'#0093CC'} height={'36px'} width={'36px'}/>
                       </li>
                       <li>
-                        <Link className={`${styles.social} ${styles['social-wp']}`}>
+                        {/* <Link className={`${styles.social} ${styles['social-wp']}`}>
                           <p>Whatsapp</p>
-                        </Link>
+                        </Link> */}
+                        <WpIcon baseColor={'white'} hoverColor={'#0093CC'} height={'36px'} width={'36px'}/>
                       </li>
                     </ul>
                   </li>
