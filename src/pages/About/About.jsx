@@ -35,7 +35,7 @@ function About() {
             lg:w-[55%]
             lg:max-w-[600px]
           `}>
-            <h2 className='text-darkblue text-xl leading-xl font-black'>Quiénes somos</h2>
+            <h2 className='text-darkblue text-xl leading-xl font-black xl:text-xxl xl:leading-xxl'>Quiénes somos</h2>
             <p>En LogiStran, brindamos servicios integrales de Transporte y Logística, respaldados por 25 años de experiencia. Nos especializamos en el retiro de contenedores y cargas desde puertos y aeropuertos, la gestión de mercadería fuera de medida, y contamos con un depósito seguro de 800 m² con vigilancia 24/7.</p>
 
             <p>También ofrecemos servicios de desconsolidado, acopio y distribución de mercadería, respaldados por una flota diversa de vehículos que cumplen con todas las normativas de tránsito. Además, proporcionamos presupuestos flexibles y cotizaciones personalizadas para optimizar los costos operativos de su empresa.</p>

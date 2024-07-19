@@ -188,8 +188,28 @@
   }
   
   @media (min-width: 1400px) {
+
+
+    .intro .image {
+      max-height: none;
+      position: relative;
+      z-index: 1;
+      width: 50%;
+    }
+
+    .intro .image picture {
+      width: auto;
+      height: 100%;
+    }
+
+    .intro .image picture img {
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .services {
-      margin-top: -300px; /* Superposición */
+      margin-top: -280px; /* Superposición */
     }
   }
   

@@ -53,18 +53,24 @@ const Home = () => {
           xl:pt-[300px]
           xl:pb-[400px]
           xl:w-[50%]
-          2xl:pt-[200px]
+          2xl:pt-[300px]
           2xl:pb-[500px]
+          2xl:px-[40px]
         `}>
           <h2 className='
             text-darkblue text-xl leading-xl font-black
             lg:max-w-[380px]
-            xl:max-w-[380px]
+            xl:max-w-[600px]
+            xl:text-xxl
+            xl:leading-xxl
+            2xl:text-xxl
+            2xl:leading-xxl
           '>Expertos en Transporte y Logística con 25 Años de Experiencia</h2>
           <p className='
             text-sm
             lg:max-w-[380px]
-            xl:max-w-[380px]
+            xl:max-w-[500px]
+            2xl:text-md
           '>Ofrecemos soluciones logísticas personalizadas, incluyendo retiro de contenedores en puertos y aeropuertos, almacenaje seguro con vigilancia 24/7, y distribución eficiente de mercadería.</p>
           <div className='flex flex-row flex-wrap justify-start items-start gap-4'>
             <Link to={'/contacto'} className={`
