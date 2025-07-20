@@ -4,212 +4,215 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-  }
-  
-  .intro .image {
+}
+
+.intro .image {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     max-height: 700px;
     overflow: hidden;
-  }
-  
-  .intro .image picture {
+}
+
+.intro .image picture {
     width: 100%;
     height: auto;
-  }
-  
-  .intro .image picture img {
+}
+
+.intro .image picture img {
     width: 100%;
     height: auto;
     object-fit: cover;
-  }
-  
-  @media (min-width: 1024px) {
+}
+
+@media (min-width: 1024px) {
     .intro {
-      flex-direction: row;
+        flex-direction: row;
     }
-  
+
     .intro .image {
-      width: 50%;
+        width: 50%;
     }
-  
+
     .services {
-      margin-top: -200px; /* Superposición */
+        margin-top: -200px; /* Superposición */
     }
-  }
-  
-  @media (min-width: 1400px) {
+}
+
+@media (min-width: 1400px) {
     .services {
-      margin-top: -300px; /* Superposición */
+        margin-top: -300px; /* Superposición */
     }
-  }
-  
-  .spacer {
+}
+
+.spacer {
     aspect-ratio: 960/300;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-  }
-  
-  .layer {
-    background-image: url('/images/wave-haikei.svg');
-  }
-  
-  .services > div {
+}
+
+.layer {
+    background-image: url("/images/wave-haikei.svg");
+}
+
+.services > div {
     background-color: white;
     border-radius: 22px;
-    box-shadow: 1px 1px 11px 0px rgba(0,0,0,0.05);
-    -webkit-box-shadow: 1px 1px 11px 0px rgba(0,0,0,0.05);
-    -moz-box-shadow: 1px 1px 11px 0px rgba(0,0,0,0.05);
-  }
-  
-  .service .img {
+    box-shadow: 1px 1px 11px 0px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 1px 1px 11px 0px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 1px 1px 11px 0px rgba(0, 0, 0, 0.05);
+}
+
+.service .img {
     width: 100px;
     height: 70px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     margin-bottom: 20px;
-  }
-  
-  .service .retiro {
-    background-image: url('/images/retiro-icon.svg');
-  }
-  .service .almacenamiento {
-    background-image: url('/images/almacenamiento-icon.svg');
-  }
-  .service .entrega {
-    background-image: url('/images/entrega-icon.svg');
-  }
-  
-  .client {
-    background-color: gray;
-  }
-  
-  .logo img {
+}
+
+.service .retiro {
+    background-image: url("/images/retiro-icon.svg");
+}
+.service .almacenamiento {
+    background-image: url("/images/almacenamiento-icon.svg");
+}
+.service .entrega {
+    background-image: url("/images/entrega-icon.svg");
+}
+
+.client {
+    border: solid 2px #22a4d7;
+    border-radius: 00px 20px 0px 20px;
+    color: white;
+    transition: 0.3s all ease-in-out;
+    background-color: #0d1f2a;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.client:hover {
+    background-color: #22a4d7;
+    scale: 1.05;
+}
+
+.logo img {
     width: 280px;
     /* border: solid 1px red; */
-  }
-  
-  .contact-us {
-    background-image: url('/images/contact-us-small.jpg');
+}
+
+.contact-us {
+    background-image: url("/images/contact-us-small.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
-  
-  .clients {
+}
+
+.clients {
     top: -2px;
     margin-bottom: -2px;
-  }
-  
-  @media (min-width: 1024px) {
+}
 
+@media (min-width: 1024px) {
     .intro {
-      position: relative;
-      z-index: 1;
+        position: relative;
+        z-index: 1;
     }
 
     .intro .image {
-      max-height: 1000px;
-      position: relative;
-      z-index: 1;
-      width: 50%;
+        max-height: 1000px;
+        position: relative;
+        z-index: 1;
+        width: 50%;
     }
 
     .intro .image picture {
-      width: auto;
-      height: 100%;
+        width: auto;
+        height: 100%;
     }
 
     .intro .image picture img {
-      width: auto;
-      height: 100%;
-      object-fit: cover;
+        width: auto;
+        height: 100%;
+        object-fit: cover;
     }
-    
-  
+
     .intro > div {
-      width: 50vw;
+        width: 50vw;
     }
-  
-    
-  
+
     .services {
-      position: relative;
-      z-index: 2;
-      margin-top: -200px; /* Superposición */
+        position: relative;
+        z-index: 2;
+        margin-top: -200px; /* Superposición */
     }
-  
+
     .services > div {
-      flex-wrap: wrap; /* Ensure child elements wrap if needed */
-      align-items: stretch; /* Make sure all children are stretched to the same height */
-      flex-direction: row; /* Ensures services are in a row */
+        flex-wrap: wrap; /* Ensure child elements wrap if needed */
+        align-items: stretch; /* Make sure all children are stretched to the same height */
+        flex-direction: row; /* Ensures services are in a row */
     }
-  
+
     .spacer {
-      aspect-ratio: 960/300;
-      width: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+        aspect-ratio: 960/300;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
-  
+
     .layer {
-      background-image: url('/images/wave-haikei-big.svg');
-      background-position-y: top;
+        background-image: url("/images/wave-haikei-big.svg");
+        background-position-y: top;
     }
-  
+
     .service .img {
-      width: 50px;
-      height: 50px;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      margin-bottom: 0px;
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-bottom: 0px;
     }
-  
+
     .service .entrega {
-      width: 90px;
+        width: 90px;
     }
-    
+
     .contact-us {
-      background-image: url('/images/contact-us-xbig.jpg');
+        background-image: url("/images/contact-us-xbig.jpg");
     }
-  }
-  
-  @media (min-width: 1280px) {
+}
+
+@media (min-width: 1280px) {
     .intro .image {
-      width: 50%;
+        width: 50%;
     }
-  }
-  
-  @media (min-width: 1400px) {
+}
 
-
+@media (min-width: 1400px) {
     .intro .image {
-      max-height: none;
-      position: relative;
-      z-index: 1;
-      width: 50%;
+        max-height: none;
+        position: relative;
+        z-index: 1;
+        width: 50%;
     }
 
     .intro .image picture {
-      width: auto;
-      height: 100%;
+        width: auto;
+        height: 100%;
     }
 
     .intro .image picture img {
-      width: auto;
-      height: 100%;
-      object-fit: cover;
+        width: auto;
+        height: 100%;
+        object-fit: cover;
     }
 
     .services {
-      margin-top: -280px; /* Superposición */
+        margin-top: -280px; /* Superposición */
     }
-  }
-  
+}
