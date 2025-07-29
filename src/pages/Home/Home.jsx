@@ -394,16 +394,16 @@ const Home = () => {
 
                         <a
                             className={`${styles.client} w-full max-w-[300px] h-[80px] px-4 m-auto text-center flex flex-col justify-center items-center`}
-                            href="https://sinerlogic.com/"
+                            href="https://maps.app.goo.gl/qs3BgkNBHxnY254i8"
                         >
-                            Sinerlogic
+                            Güemes Construcciones
                         </a>
 
                         <a
                             className={`${styles.client} w-full max-w-[300px] h-[80px] px-4 m-auto text-center flex flex-col justify-center items-center`}
-                            href="https://www.instagram.com/salec.csf/"
+                            href="https://maps.app.goo.gl/v3gXthPfWnXX9HvY9"
                         >
-                            Salec
+                            Salec SRL
                         </a>
                     </div>
                 </div>
